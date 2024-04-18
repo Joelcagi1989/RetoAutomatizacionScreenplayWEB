@@ -1,4 +1,3 @@
-# RetoAutomatizacionBancolombia
+# Reto Automatizacion Choucair
+Se realiza automatizacion de pagina Utest.com para realizar el registro de un usuario en dicha pagina
 
-
-Se automatiza la pagina https://tasks.evalartapp.com/automatization/ para diligenciar los diversos ciclos de formularios de la p�gina.
