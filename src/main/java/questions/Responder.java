@@ -2,7 +2,7 @@ package questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import userinterface.UTestHomePage;
+import userinterface.DemoQANewUserPage;
 
 public class Responder implements Question<Boolean> {
 
@@ -19,7 +19,7 @@ public class Responder implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         boolean resultado;
-        String validacion = UTestHomePage.VALIDACION.getName();
+        String validacion = DemoQANewUserPage.VALIDACION.getName();
         System.out.println("Pregunta  : " + pregunta + "**");
         System.out.println("validacion: " + validacion + "**");
        if (pregunta.equals(validacion)){

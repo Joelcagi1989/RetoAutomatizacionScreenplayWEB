@@ -1,8 +1,7 @@
 package tasks;
 
-import interactions.PasoTresCuatro;
-import interactions.PasosUnoDos;
-import model.UTestData;
+import interactions.Inscribir;
+import model.DemoQAData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -11,19 +10,18 @@ import java.util.List;
 
 public class Diligenciar implements Task {
 
-    private List<UTestData> uTestData;
+    private List<DemoQAData> demoQAData;
 
-    public Diligenciar(List<UTestData> uTestData) {
-        this.uTestData = uTestData;
+    public Diligenciar(List<DemoQAData> demoQAData) {
+        this.demoQAData = demoQAData;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(PasosUnoDos.diligenciar(uTestData),
-                PasoTresCuatro.diligenciar(uTestData));
+        actor.attemptsTo(Inscribir.laCuentaDeUsuario(demoQAData));
     }
 
-    public static Diligenciar pasos(List<UTestData> uTestData) {
-        return Tasks.instrumented(Diligenciar.class, uTestData);
+    public static Diligenciar proceso(List<DemoQAData> demoQAData) {
+        return Tasks.instrumented(Diligenciar.class, demoQAData);
     }
 }
